@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=MinGW-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/MinGW-Windows
-CND_ARTIFACT_NAME_Debug=ejercicio_13
-CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW-Windows/ejercicio_13
+CND_ARTIFACT_NAME_Debug=ejercicio_14
+CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW-Windows/ejercicio_14
 CND_PACKAGE_DIR_Debug=dist/Debug/MinGW-Windows/package
-CND_PACKAGE_NAME_Debug=ejercicio13.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/MinGW-Windows/package/ejercicio13.tar
+CND_PACKAGE_NAME_Debug=ejercicio14.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/MinGW-Windows/package/ejercicio14.tar
 # Release configuration
 CND_PLATFORM_Release=MinGW-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/MinGW-Windows
-CND_ARTIFACT_NAME_Release=ejercicio_13
-CND_ARTIFACT_PATH_Release=dist/Release/MinGW-Windows/ejercicio_13
+CND_ARTIFACT_NAME_Release=ejercicio_14
+CND_ARTIFACT_PATH_Release=dist/Release/MinGW-Windows/ejercicio_14
 CND_PACKAGE_DIR_Release=dist/Release/MinGW-Windows/package
-CND_PACKAGE_NAME_Release=ejercicio13.tar
-CND_PACKAGE_PATH_Release=dist/Release/MinGW-Windows/package/ejercicio13.tar
+CND_PACKAGE_NAME_Release=ejercicio14.tar
+CND_PACKAGE_PATH_Release=dist/Release/MinGW-Windows/package/ejercicio14.tar
 #
 # include compiler specific variables
 #
