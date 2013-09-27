@@ -19,11 +19,10 @@ typedef struct empleado{
     int legajo, edad;
     float salario;
 }empleado;
-const int n = 3;
+const int n = 100;
 void main() {
     empleado empleados[n];
-    int i, edad, legajo[n], promedio = 0;
-    float salario;
+    int i, legajo[n], promedio = 0;
     
     for(i = 0; i < sizeof(empleados)/sizeof(empleado); i++){
         do{
@@ -33,13 +32,12 @@ void main() {
         empleados[legajo[i]].legajo = legajo[i];
         
         printf("%s", "Ingrese edad: ");
-        scanf("%d", &edad);
-        empleados[legajo[i]].edad = edad;
+        scanf("%d", &empleados[legajo[i]].edad);
         promedio += empleados[legajo[i]].edad;
         
         printf("%s", "Ingrese salario: ");
-        scanf("%f", &salario);
-        empleados[legajo[i]].salario = salario;
+        scanf("%f", &empleados[legajo[i]].salario);
+
         printf("\n");
     }
     promedio /= n;
