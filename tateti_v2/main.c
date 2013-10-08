@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 int ubicacion, i = 0, x, j, count[2][4][3];
 char posicion[9], name1[15], name2[15], caracteres[100];
 void drawTable();
@@ -20,24 +21,29 @@ struct tm *tm;
 void main() {
     comienzo = time(NULL);
     tm = localtime(&comienzo);
-    scores = scores = fopen("C:\\Users\\lzielinski\\Desktop\\scores.txt", "a+");
+    scores = scores = fopen("C:\\scores.txt", "a+");
     printf("Ingrese el nombre del participante Cruz: ");
     scanf("%s", &name1);
     printf("Ingrese el nombre del participante Cara: ");
     scanf("%s", &name2);
     fprintf(scores, "%02d-%02d-%04d\t%s\t\tVS\t%s", tm->tm_mday, tm->tm_mon + 1, tm->tm_year + 1900, name1, name2);
-    while (checkWinner() == 3 && i < 8) {
+    while (checkWinner() == 3 && i < 9) {
         jugar(i);
         i++;
     }
-    x = (i - 1) % 2;
+    if(checkWinner() == 3){
+        x = 0;
+        strcpy(name1, "Empate");
+    }else
+        x = (i - 1) % 2;
     final = time(NULL);
-    fprintf(scores, "\t\t%.f s\t\t%s\n", difftime(final, comienzo), (x == 0) ? name1 : name2);
+    printf("%.2f\t%.2f\t%.2f\n", difftime(final, comienzo), final, comienzo);
+    fprintf(scores, "\t\t%.f seg\t%s\n", difftime(final, comienzo), (x == 0) ? name1 : name2);
     fclose(scores);
-    printf("¿Ver historial de batallas? (Yes = 1)(No = 0)");
+    printf("Ver historial de batallas? (Yes = 1)(No = 0)");
     scanf("%d", &x);
     if (x == 1) {
-        scores = scores = fopen("C:\\Users\\lzielinski\\Desktop\\scores.txt", "r");
+        scores = scores = fopen("C:\\scores.txt", "r");
         printf("FECHA\t\tJUGADOR1\tVS\tJUGADOR2\tDURACION\tGANADOR\n");
         while (!feof(scores)) {
             fgets(caracteres, 100, scores);
